@@ -14,6 +14,3 @@ print("The five greatest numbers are:")
 
 for number in numbers[:5]:
     print(number)
-
-
-
