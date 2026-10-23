@@ -1,8 +1,8 @@
-def sum_of_squares(first, second):
-    result = first**2 + second**2
-    return result
+length = float(input("Enter the length of the zander in centimeters: "))
 
-number1 = float(input("Enter the first number: "))
-number2 = float(input("Enter the second number: "))
-result = sum_of_squares(number1, number2)
-print(f"The sum of squares for numbers {number1:.3f} and {number2:.3f} is {result:.3f}.")
+if length < 42:
+    shortfall = 42 - length
+    print("Release the fish back into the lake.")
+    print(f"The fish was {shortfall} centimeters below the size limit.")
+else:
+    print("The fish meets the size limit.")
