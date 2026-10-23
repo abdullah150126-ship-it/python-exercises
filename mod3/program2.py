@@ -1,16 +1,17 @@
-numbers = []
+names = set()
 
 while True:
-    number = input("Enter a number: ")
+    name = input("Enter a name (or press Enter to quit): ")
 
-    if number == "":
+    if name == "":
         break
 
-    numbers.append(float(number))
+    if name in names:
+        print("Existing name")
+    else:
+        print("New name")
+        names.add(name)
 
-numbers.sort(reverse=True)
-
-print("The five greatest numbers are:")
-
-for number in numbers[:5]:
-    print(number)
+print("Names entered:")
+for name in names:
+    print(name)

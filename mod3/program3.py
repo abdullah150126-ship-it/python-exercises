@@ -1,16 +1,30 @@
-number = int(input("Enter an integer: "))
+airports = {}
 
-if number < 2:
-    print("The number is not a prime number.")
-else:
-    is_prime = True
+while True:
+    print("\nChoose an option:")
+    print("1. Enter a new airport")
+    print("2. Fetch airport information")
+    print("3. Quit")
 
-    for i in range(2, number):
-        if number % i == 0:
-            is_prime = False
-            break
+    choice = input("Enter your choice: ")
 
-    if is_prime:
-        print("The number is a prime number.")
+    if choice == "1":
+        icao = input("Enter the ICAO code: ")
+        name = input("Enter the airport name: ")
+        airports[icao] = name
+        print("Airport added.")
+
+    elif choice == "2":
+        icao = input("Enter the ICAO code: ")
+
+        if icao in airports:
+            print(airports[icao])
+        else:
+            print("Airport not found.")
+
+    elif choice == "3":
+        print("Goodbye!")
+        break
+
     else:
-        print("The number is not a prime number.")
+        print("Invalid choice. Please try again.")
